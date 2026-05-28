@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heartonice</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+    font-family: 'Helvetica Neue', 'PingFang SC', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ---- 导航 ---- */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 32px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+  }
+
+  .nav-links a {
+    color: #111;
+    text-decoration: none;
+    margin-left: 48px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: opacity 0.3s;
+  }
+
+  .nav-links a:hover {
+    opacity: 0.4;
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 64px;
+  }
+
+  .hero h1 {
+    font-size: 96px;
+    font-weight: 200;
+    letter-spacing: 12px;
+    line-height: 1;
+    text-transform: lowercase;
+  }
+
+  .hero .subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 6px;
+    color: #999;
+    margin-top: 32px;
+  }
+
+  /* ---- About ---- */
+  .section {
+    padding: 120px 64px;
+    max-width: 900px;
+  }
+
+  .section-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #bbb;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  .section p {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  /* ---- Work ---- */
+  .work-grid {
+    padding: 0 64px 120px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+
+  .work-item {
+    border-top: 1px solid #ddd;
+    padding-top: 32px;
+  }
+
+  .work-item h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .work-item .tag {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #bbb;
+    text-transform: uppercase;
+  }
+
+  /* ---- Contact ---- */
+  .contact {
+    padding: 120px 64px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+  }
+
+  .contact h2 {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 6px;
+    margin-bottom: 24px;
+  }
+
+  .contact a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+  }
+
+  .contact a:hover {
+    color: #111;
+  }
+
+  /* ---- Footer ---- */
+  footer {
+    padding: 40px 64px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ccc;
+  }
+
+  /* ---- 响应式 ---- */
+  @media (max-width: 768px) {
+    nav {
+      padding: 24px 24px;
+    }
+
+    .hero {
+      padding: 0 24px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      letter-spacing: 8px;
+    }
+
+    .section {
+      padding: 80px 24px;
+    }
+
+    .section p {
+      font-size: 20px;
+    }
+
+    .work-grid {
+      padding: 0 24px 80px;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .contact {
+      padding: 80px 24px;
+    }
+
+    .contact h2 {
+      font-size: 32px;
+    }
+
+    .nav-links a {
+      margin-left: 24px;
+      font-size: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">heartonice</div>
+  <div class="nav-links">
+    <a href="#about">about</a>
+    <a href="#work">work</a>
+    <a href="#contact">contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>heartonice</h1>
+  <p class="subtitle">DESIGN · CODE · CREATE</p>
+</section>
+
+<section class="section" id="about">
+  <p class="section-label">/ about</p>
+  <p>
+    I'm Heartonice — a creator working at the intersection of design and technology. I believe in simplicity, clean lines, and the power of negative space. Every project is a pursuit of the essential.
+  </p>
+</section>
+
+<section id="work">
+  <div style="padding: 0 64px;">
+    <p class="section-label">/ work</p>
+  </div>
+  <div class="work-grid">
+    <div class="work-item">
+      <h3>Project One</h3>
+      <p class="tag">Brand Identity</p>
+    </div>
+    <div class="work-item">
+      <h3>Project Two</h3>
+      <p class="tag">Web Design</p>
+    </div>
+    <div class="work-item">
+      <h3>Project Three</h3>
+      <p class="tag">Photography</p>
+    </div>
+    <div class="work-item">
+      <h3>Project Four</h3>
+      <p class="tag">Creative Direction</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Get in Touch</h2>
+  <p style="color: #bbb; margin-bottom: 16px; font-weight: 300;">
+    <a href="mailto:hello@heartonice.com">hello@heartonice.com</a>
+  </p>
+</section>
+
+<footer>
+  © 2026 Heartonice. All rights reserved.
+</footer>
+
+</body>
+</html>
